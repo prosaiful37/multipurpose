@@ -1,7 +1,7 @@
 @extends('layouts.app');
 
 @section('main-content')
-				<!-- Page Wrapper -->
+			<!-- Page Wrapper -->
             <div class="page-wrapper">
 
                 <div class="content container-fluid">
@@ -10,7 +10,7 @@
 					<div class="page-header">
 						<div class="row">
 							<div class="col-sm-12">
-								<h3 class="page-title">Welcome Admin!</h3>
+								<h3 class="page-title">Welcome  {{  Auth::user() -> name  }}!</h3>
 								<ul class="breadcrumb">
 									<li class="breadcrumb-item active">Dashboard</li>
 								</ul>
@@ -22,16 +22,16 @@
                <div class="row">
                      <div class="col-md-10">
                             @include('validate')
-							<a class="btn btn-success" data-toggle="modal" href="#category_modal">Add new category</a>
+							<a class="btn btn-success" data-toggle="modal" href="#category_modal">Add new Category</a>
 							<br>
 							<br>
 							<div class="card">
 								<div class="card-header">
-									<h4 class="card-title">All Category</h4>
+									<h4 class="card-title">All Categorys</h4>
 								</div>
 								<div class="card-body">
 									<div class="table-responsive">
-										<table class="table table-striped mb-0">
+										<table class="table table-striped mb-0 post-table">
 											<thead>
 												<tr>
 													<th>#</th>
@@ -68,20 +68,20 @@
 													</td>
 												</tr>
                                        @endforeach
-											</tbody> 
+											</tbody>
 										</table>
 									</div>
 								</div>
 							</div>
 						</div>
                     </div>
-                    
+
                     {{-- add category modal --}}
 					<div id="category_modal" class="modal fade">
 						<div class="modal-dialog modal-dialog-centered">
 							<div class="modal-content bg-success">
 								<div class="modal-header">
-									<h4 class="modal-title">Add new Category</h4>
+									<h4 class="modal-title">Add new Categorys</h4>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									  <span aria-hidden="true">&times;</span>
 									</button>
@@ -100,7 +100,7 @@
 							</div>
 						</div>
                     </div>
-                    
+
                     {{-- category update modal --}}
 					<div id="category_modal_Update" class="modal fade">
 						<div class="modal-dialog modal-dialog-centered">

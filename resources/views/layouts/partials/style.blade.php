@@ -13,6 +13,7 @@
 		
 		<!-- Main CSS -->
         <link rel="stylesheet" href="{{ asset('admin/assets/css/style.css')}}">
+        <link rel="stylesheet" href="{{ asset('admin/assets/css/datatables.min.css')}}">
 
       <!--[if lt IE 9]>
 			<script src="admin/assets/js/html5shiv.min.js"></script>
